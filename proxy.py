@@ -20,9 +20,11 @@ class Proxy:
 
 		if self.occupied == 'No':
 			#If the producer is available, create a producer object!
-			
+			self.producer = Producer()
+			time.sleep(2)
 
-			#Make the prodcuer meet the guest!
+			#Make the producer meet the guest!
+			self.producer.meet()
 			
 			
 		else:
@@ -31,14 +33,14 @@ class Proxy:
 			print("Producer is busy!")
 
 #Instantiate a Proxy
-
+p = Proxy()
 
 #Make the proxy: Artist produce until Producer is available
-
+p.produce()
 
 #Change the state to 'occupied'
-
+p.occupied = 'Yes'
 
 #Make the Producer produce
-
+p.produce()
 
